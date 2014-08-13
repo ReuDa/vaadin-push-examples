@@ -1,39 +1,14 @@
 package de.codecentric.example.longpolling;
 
 import com.vaadin.annotations.Push;
-import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.communication.PushMode;
 import com.vaadin.shared.ui.ui.Transport;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Button.ClickListener;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+
+import de.codecentric.example.common.PushUI;
 
 @Push(value = PushMode.AUTOMATIC, transport = Transport.LONG_POLLING)
-public class LongpollingUI extends UI {
+public class LongpollingUI extends PushUI {
 
     private static final long serialVersionUID = 1L;
-
-    @Override
-    protected void init(VaadinRequest request) {
-	final VerticalLayout content = new VerticalLayout();
-	setContent(content);
-
-	content.addComponent(new Label("Should use Long-Polling"));
-
-	Button button = new Button("Click me");
-	button.addClickListener(new ClickListener() {
-	    private static final long serialVersionUID = 1L;
-
-	    @Override
-	    public void buttonClick(ClickEvent event) {
-		content.addComponent(new Label("Hello World!"));
-	    }
-	});
-
-	content.addComponent(button);
-    }
 
 }

@@ -1,4 +1,4 @@
-package de.codecentric.example.server;
+package de.codecentric.example.common;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

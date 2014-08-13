@@ -1,4 +1,4 @@
-package de.codecentric.example.server;
+package de.codecentric.example.common;
 
 import com.vaadin.server.DeploymentConfiguration;
 import com.vaadin.server.ServiceException;

@@ -4,7 +4,7 @@ import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.annotations.VaadinServletConfiguration;
 
-import de.codecentric.example.server.LoggingVaadinServlet;
+import de.codecentric.example.common.LoggingVaadinServlet;
 
 @WebServlet(value = { "/longpolling/*", "/VAADIN/*" }, asyncSupported = true)
 @VaadinServletConfiguration(productionMode = false, ui = LongpollingUI.class)
